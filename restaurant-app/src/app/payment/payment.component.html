@@ -1,0 +1,19 @@
+<table *ngIf="tableItems.length > 0" class="menu-table">
+    <thead>
+        <tr>
+            <th>Table_ID</th>
+            <th>Availability</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of tableItems">
+            <td>{{item.table_id}}</td>  
+            <td>
+                <span class="availability-wrapper">
+                    {{item.availability ? 'Available' : 'Occupied'}}
+                    <span class="status-box" [ngClass]="{'available-box': item.availability, 'occupied-box': !item.availability}"></span>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>

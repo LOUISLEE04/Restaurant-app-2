@@ -1,0 +1,63 @@
+.menu-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 18px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+
+    thead {
+        background-color: #007bff;
+        color: #fff;
+        th {
+            padding: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            border-bottom: 2px solid #0056b3;
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+            &:hover {
+                background-color: #e9ecef;
+                cursor: pointer;
+            }
+        }
+        td {
+            padding: 16px;
+            border-bottom: 1px solid #ddd;
+        }
+    }
+}
+
+.availability-wrapper {
+    display: inline-flex; /* Ensures text and box are in the same row */
+    align-items: center; /* Vertically centers the items */
+}
+
+.status-box {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 8px; /* Adjusts spacing between text and box */
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.available-box {
+    background-color: green;
+}
+
+.occupied-box {
+    background-color: red;
+}

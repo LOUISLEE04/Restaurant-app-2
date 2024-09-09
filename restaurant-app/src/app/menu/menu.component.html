@@ -1,0 +1,41 @@
+<div class="menu-container">
+  <h4>Menu</h4>
+  <!-- Search input and button -->
+  <div class="search-bar">
+    <input [(ngModel)]="searchQuery" placeholder="Search menu items" />
+    <button (click)="searchMenu()">Search</button>
+  </div>
+
+  <div class="sorting-options">
+    <label for="sort">Sort by Price:</label>
+    <select [(ngModel)]="sortOrder" (change)="sortMenu()">
+      <option value="">Select</option>
+      <option value="asc">Low to High</option>
+      <option value="desc">High to Low</option>
+    </select>
+  </div>
+  
+  <!-- Table to display menu items -->
+  <table *ngIf="menuItems.length > 0" class="menu-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of menuItems">
+        <td>{{ item.name }}</td>
+        <td>{{ item.category }}</td>
+        <td>${{ item.item_price }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div *ngIf="menuItems.length === 0">
+    No menu items available.
+  </div>
+</div>
+
+

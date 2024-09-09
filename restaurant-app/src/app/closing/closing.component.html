@@ -1,0 +1,147 @@
+<!-- closing.component.html -->
+<!-- closing.component.html -->
+<div class="cash-count">
+  <h2>Cash Count Calculator</h2>
+  
+  <!-- Input fields for each denomination -->
+  <div class="denomination-row">
+    <label for="hundred-bills">$100 Bills:</label>
+    <input
+      id="hundred-bills"
+      type="number"
+      [value]="denominations[0].count"
+      (input)="updateCount($event, 0)"
+      min="0"
+      class="count-input"
+      placeholder="Enter count"
+    />
+  </div>
+
+  <div class="denomination-row">
+    <label for="fifty-bills">$50 Bills:</label>
+    <input
+      id="fifty-bills"
+      type="number"
+      [value]="denominations[1].count"
+      (input)="updateCount($event, 1)"
+      min="0"
+      class="count-input"
+      placeholder="Enter count"
+    />
+  </div>
+
+  <div class="denomination-row">
+    <label for="twenty-bills">$20 Bills:</label>
+    <input
+      id="twenty-bills"
+      type="number"
+      [value]="denominations[2].count"
+      (input)="updateCount($event, 2)"
+      min="0"
+      class="count-input"
+      placeholder="Enter count"
+    />
+  </div>
+
+  <div class="denomination-row">
+    <label for="ten-bills">$10 Bills:</label>
+    <input
+      id="ten-bills"
+      type="number"
+      [value]="denominations[3].count"
+      (input)="updateCount($event, 3)"
+      min="0"
+      class="count-input"
+      placeholder="Enter count"
+    />
+  </div>
+
+  <div class="denomination-row">
+    <label for="five-bills">$5 Bills:</label>
+    <input
+      id="five-bills"
+      type="number"
+      [value]="denominations[4].count"
+      (input)="updateCount($event, 4)"
+      min="0"
+      class="count-input"
+      placeholder="Enter count"
+    />
+  </div>
+
+  <div class="denomination-row">
+    <label for="one-bills">$1 Bills:</label>
+    <input
+      id="one-bills"
+      type="number"
+      [value]="denominations[5].count"
+      (input)="updateCount($event, 5)"
+      min="0"
+      class="count-input"
+      placeholder="Enter count"
+    />
+  </div>
+
+  <div class="denomination-row">
+    <label for="quarters">Quarters:</label>
+    <input
+      id="quarters"
+      type="number"
+      [value]="denominations[6].count"
+      (input)="updateCount($event, 6)"
+      min="0"
+      class="count-input"
+      placeholder="Enter count"
+    />
+  </div>
+
+  <div class="denomination-row">
+    <label for="dimes">Dimes:</label>
+    <input
+      id="dimes"
+      type="number"
+      [value]="denominations[7].count"
+      (input)="updateCount($event, 7)"
+      min="0"
+      class="count-input"
+      placeholder="Enter count"
+    />
+  </div>
+
+  <div class="denomination-row">
+    <label for="nickels">Nickels:</label>
+    <input
+      id="nickels"
+      type="number"
+      [value]="denominations[8].count"
+      (input)="updateCount($event, 8)"
+      min="0"
+      class="count-input"
+      placeholder="Enter count"
+    />
+  </div>
+
+  <div class="denomination-row">
+    <label for="pennies">Pennies:</label>
+    <input
+      id="pennies"
+      type="number"
+      [value]="denominations[9].count"
+      (input)="updateCount($event, 9)"
+      min="0"
+      class="count-input"
+      placeholder="Enter count"
+    />
+  </div>
+
+  <div class="total">
+    <h6>Total Value of Notes: {{ getFormattedTotalNotes()}}</h6>
+    <h6>Total Value of Coins: {{ getFormattedTotalCoins()}}</h6>
+    <h3>Total Cash: {{ getFormattedTotalCash() }}</h3>
+
+    <div class="reset-button-container">
+      <button (click)="resetCalculator()" class="reset-button">Reset</button>
+    </div>
+  </div>
+</div>
+

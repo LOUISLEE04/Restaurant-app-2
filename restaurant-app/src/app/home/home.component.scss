@@ -1,0 +1,48 @@
+/* src/app/home/home.component.scss */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.home-container {
+    text-align: center;
+    margin-top: 50px;
+    background: linear-gradient(to bottom, #b2f5ea, #ffffff); /* Green to white gradient */
+    padding: 50px; /* Adjust padding to fit content */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    font-family: 'Roboto', sans-serif; /* Apply the chosen font */
+}
+
+h1 {
+    color: #333; /* Darker color for better contrast */
+    font-size: 2.5rem; /* Larger font size for the heading */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+.button-group {
+    margin-top: 30px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif; /* Ensure the button text uses the chosen font */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.image-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin: 10px;
+}
